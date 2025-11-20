@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.http import JsonResponse
 
-# Create your views here.
+def transacoes(request):
+    if request.method == "GET":
+        transacao = {
+            'id': '1',
+            'nome': '',
+            'valor': '',
+            'horario': ''
+        }
+        return JsonResponse(transacao)
